@@ -1,0 +1,67 @@
+INSERT INTO student_laptops VALUES 
+('ASUS','ASUS VivoBook 15 ',
+'Processor: 2.1 GHz Dual-Core 8th Gen. Intel Core i3-8145U, up to 3.9 GHZ
+ RAM: 8 GB, DDR4
+ Storage: 128 GB M.2 SSD
+ Graphics Card: Intel UHD Graphics 620
+ Display: 15.6″ FHD Display
+ Operating System: Windows 10
+ Battery: N/A', 
+ '37500','AS-1'),
+
+('ASUS','Asus Chromebook Flip',
+'Processor: 0.9 GHz Intel Core m3
+ RAM: 4 GB 
+ Storage: 64 GB Flash Expandable via Google Drive 
+ Display: 15.6″ FHD Display
+ Operating System: Windows 10
+ Battery: 10 Hours',
+ '32400','AS-2'),
+
+ 
+('HP','HP 15s-du1068TU Celeron N4020',
+'Processor: Intel Celeron N4020, 4MB Cache, 1.10 GHz up to 2.80 GHz
+ Ram: 4 GB DDR4 ,3200mhz RAM
+ Storage: 1 TB HDD
+ Graphics: Intel HD Graphics
+ Display: 15.6 HD ,1366 x 768 Display
+ Operating System: Windows 10 Home',
+ '33000', 'HPS-1'),
+
+('HP','HP 15s-du1027TX', 
+'Processor: Intel Core i7-10510U Processor,8M Cache, 1.80 GHz up to 4.90 GHz
+ Ram: 8 GB DDR4-2666 SDRAM,1 x 8 GB
+ Storage: 1 TB 5400 rpm SATA HDD
+ Graphics: NVIDIA GeForce MX130 2 GB GDDR5 dedicated Graphics
+ Display: 15.6 diagonal FHD SVA anti-glare micro-edge WLED-backlit,1920 x 1080
+ Operating System: Windows 10
+ Battery: 3-cell, 41 Wh Li-ion',
+ '44500', 'HPS-2'),
+
+('Lenovo','Lenovo Ideapad Slim 3',
+'Processor: AMD Ryzen 5 3500U Processor,2.10GHz 2MB
+ RAM: 12 GB.
+ Storage: 1 TB HDD SATA, 5400rpm.
+ Display: 15.6 inches.
+ Camera: 0.3 MP.
+ Operating System: Windows 10', 
+'31000','LS-1'),
+
+('Apple','Apple Macbook Air',
+'Intel Core i5 processor,1.6GHz dual-core up to 3.6GHz, 4MB L3 cache
+ RAM: 8 GB of 2133MHz LPDDR3 RAM
+ Storage: 128 GB SSD
+ Display: 13.3-inch Retina Display LED-backlit
+ Operating System: Windows 10',
+ '105000','APS-1'),
+
+('Dell','Dell Inspiron 15-3583 Pentium Gold 5405U', 
+'Processor: Intel Pentium Gold 5405U Processor ,2M Cache, 2.30 GHz
+ Ram: 4 GB DDR4 2666MHz RAM
+ Storage: 1 TB HDD
+ Graphics: Intel UHD Graphics 610
+ Display: 15.6-inch HD ,1366 x 768 Anti-Glare LED-Backlit Non-touch Display
+ Operating System: Windows 10 Home
+ Battery: 3-Cell, 42 WHr, Integrated battery
+ Adapter:45 W AC adapter',
+ '38500','DS-1');

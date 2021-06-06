@@ -1,0 +1,71 @@
+TABLE budget_laptops{
+  	Brand varchar[15]
+  	Model varchar[50]
+  	Basic_Information varchar[800]
+  	Price numeric[6]
+
+  	Product_ID varchar[15]
+  	}
+TABLE gaming{
+  	Brand varchar[15]
+  	Model varchar[50]
+  	Basic_Information varchar[800]
+  	Price numeric[6]
+  	
+  	Product_ID varchar[15]
+  	}
+
+TABLE macbook{
+  	Brand varchar[15]
+  	Model varchar[50]
+  	Basic_Information varchar[800]
+  	Price numeric[6]
+  
+  	Product_ID varchar[15]
+  	}
+TABLE student_laptops{
+  	Brand varchar[15]
+  	Model varchar[50]
+  	Basic_Information varchar[800]
+  	Price numeric[6]
+
+  	Product_ID varchar[15]
+  	}
+  	
+TABLE ultra_book{
+  	Brand varchar[15]
+  	Model varchar[50]
+  	Basic_Information varchar[800]
+  	Price numeric[6]
+
+  	Product_ID varchar[15]
+  	}
+Ref: budget_laptops.Brand - gaming.Brand
+Ref: budget_laptops.Brand - student_laptops.Brand
+Ref: budget_laptops.Brand - ultra_book.Brand
+Ref: budget_laptops.Brand - macbook.Brand
+
+Ref: macbook.Brand - student_laptops.Brand
+Ref: macbook.Brand - gaming.Brand
+Ref: macbook.Brand - ultra_book.Brand
+
+Ref: gaming.Brand - student_laptops.Brand
+Ref: gaming.Brand - ultra_book.Brand
+
+Ref: ultra_book.Brand - student_laptops.Brand
+
+
+
+Ref: budget_laptops.Price - gaming.Price
+Ref: budget_laptops.Price - student_laptops.Price
+Ref: budget_laptops.Price - ultra_book.Price
+Ref: budget_laptops.Price - macbook.Price
+
+Ref: macbook.Price - student_laptops.Price
+Ref: macbook.Price - gaming.Price
+Ref: macbook.Price - ultra_book.Price
+
+Ref: gaming.Price - student_laptops.Price
+Ref: gaming.Price - ultra_book.Price
+
+Ref: ultra_book.Price - student_laptops.Price

@@ -1,0 +1,71 @@
+INSERT INTO budget_laptops VALUES 
+('DELL','Inspiron n3552',
+ 'Processor: Intel Pentium Quad Core (Processor 3700U 1.6GHz 2MB Cache).
+ Ram: 4GB DDR3, 
+ Storage: 500GB SATA HDD
+ Dsiplay: 15.6″ HD (1366 x 768) LED Display
+ Operating System: Windows 10 operating system
+ Special Feature: Webcam, Bluetooth, Wi-Fi, Card Reader',
+ '25800','DB-1'),
+
+('DELL','Chromebook 11',
+'Processor: Intel Celeron N2955U
+ Ram: 4 GB DDR3 SDRAM
+ Storage: 16 GB SSD drive
+ Display: 11.6 inch HD SVA BrightView WLED-backlit, 1366 x 768 resolution,
+ Operating System: Chrome OS
+ Multi-format media reader (SD, SDHC, SDXC), 802. 11 A/C, Bluetooth 4. 0
+ 1 x USB 3. 0 port, 2 x USB 2. 0 port, 1 x HDMI port, 1 x headphone/microphone jack,
+ 3-cell, 36 WHr Li-ion Battery, Weighs 3. 6 lbs, Black Color',
+ '10400','DB-2'),
+
+('ASUS','Asus X540LA',
+'Processor: Intel Core i3-5020U Processor (3M Cache, 2.20 GHz).
+ RAM: 4GB DDR3L .
+ Storage: 1TB HDD.
+ Disply: 15.6 HD (1366×768).
+ Operating System: Windows 10 operating system', 
+'30000','AB-1'),
+
+('ASUS','Vivobook X515MA Celeron N4020',
+'Processor: Intel Celeron N4020 (4M Cache, 1.10 GHz up to 2.80 GHz)
+ Ram: 4 GB DDR4 RAM
+ Storage: 1 TB HDD
+ Display: 15.6 FHD (1920x1080)
+ Operating System: Windows 10 operating system',
+ '36000','AB-2'),
+
+('HP','15-bs630TU', 
+'Processor:Intel® Pentium® N3710 processor (1.6 GHz-2.56GHz)
+ Ram: 4GB DDR3L 
+ Storage: 500 GB 5400 rpm SATA
+ Display: 15.6 diagonal HD (1366 x 768) SVA BrightView WLED-backli
+ Operating System: Windows 10 operating systemt',
+ '28300','HPB-1'),
+
+('HP','15s-du1068TU', 
+'Processor: Intel Celeron N4020 (4MB Cache, 1.10 GHz up to 2.80 GHz)
+ Ram: 4 GB DDR4 3200Mhz 
+ Storage: 1 TB HDD
+ Graphics: Intel HD Graphics
+ Display:15.6 HD (1366 x 768)
+ Audio: Dual speakers, Web Camera
+ Operating System: Windows 10 operating system',
+ '34000','HPB-2'),
+
+
+('Lenovo','Ideapad D330', 
+'Processor: Intel Celeron Dual Core Processor
+ Ram: 4 GB Memory
+ Storage: 128 GB SSD
+ Display: 10.1 inch Screen
+ Operating System: Windows 10 operating system',
+ '28100','LB-1'),
+
+('Lenovo','Lenovo V15', 
+'Processor: AMD Dual Core Processor
+ Ram: 4 GB Memory
+ Storage: 1 TB HDD
+ Disply: 15.6 inch Screen
+ Operating System: Windows 10 operating system',
+ '28086','LB-2');

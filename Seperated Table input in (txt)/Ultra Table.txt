@@ -1,0 +1,124 @@
+INSERT INTO ultra_book VALUES
+('ASUS','ZenBook 14 UM425IA',
+ 'Processor: AMD Ryzen 5 4500U (2.30 GHz up to 4.00 GHz, 8MB Cache)
+ Ram: 8 GB LPDDR4x RAM
+ Storage: 512 GB PCIe G3 SSD
+ Graphics: AMD Radeon Graphics
+ Display: 14  FHD (1920x1080) Display
+ Operating System: Windows 10 Home
+ Battery: 67 Wh 4-cell lithium-polymer battery
+ Adapter 65 W power adaptor
+ Plug Type: Type C
+ Audio:	ASUS SonicMaster stereo audio system with surround-sound;
+ smart amplifier for maximum audio performance
+ Array microphone with Cortana and Alexa voice-recognition support
+ Certified by Harman Kardon
+ Special Feature:	Touchpad / NumberPad:
+ Glass-covered; intelligent palm-rejection
+ Precision Touchpad (PTP) technology supports up to four-finger smart gestures',
+'77000','AUB-1'),
+
+('ASUS','ZenBook 14 UM425IB',
+ 'Processor: AMD Ryzen 7 4700U Processor (8M Cache, 2.00GHz up to 4.10 GHz)
+ Ram: 16 GB LPDDR4x RAM
+ Storage: 512GB PCIe NVMe 3.0 x2 M.2 SSD
+ Graphics: AMD Radeon Graphics
+ Display: 14 FHD (1920x1080) Display
+ Operating System: Windows 10 Home
+ Battery: 67 Wh 4-cell lithium-polymer battery
+ Adapter 65 W power adaptor
+ Plug Type: Type C(Output: 20 V DC, 65 W)
+ (Input: 100-240 V AC, 50/60 Hz universal)
+ Audio:	ASUS SonicMaster stereo audio system with surround-sound; 
+ smart amplifier for maximum audio performance
+ Array microphone with Cortana and Alexa voice-recognition support
+ Certified by Harman Kardon
+ Special Feature: Touchpad / NumberPad:
+ Glass-covered; intelligent palm-rejection
+ Precision Touchpad (PTP) technology supports up to four-finger smart gestures',
+'95000','AUB-2'),
+
+('ASUS','ZenBook Duo UX481FA',
+'Processor:	Intel Core i7-10510U Processor (8M Cache, 1.80 GHz up to 4.90 GHz)
+ Ram: 8GB LPDDR3 on board RAM
+ Storage: 512GB M.2 NVMe PCIe 3.0 SSD
+ Graphics: Intel UHD Graphics 620
+ Display: 14 LED-backlit Full HD (1920 x 1080) 16:9 Anti-glare, 
+ Pantone Validated, Display
+ 3.5mm-thin bezel with 90% screen-to-body ratio 100% sRGB
+ Operating System:	Windows 10
+ Battery: 70WHrs, 4S1P, 4-cell Li-ion
+ Adapter 65W power adapter
+ Plug Type: ø4.5 (mm)
+ (Output: 19V DC, 3.42A, 65W)
+ (Input: 100-240V AC, 50/60Hz universal)
+ Audio:	Audio by ICEpower
+ Smart Amp Technology
+ Built-in speaker
+ Built-in array microphone//harman/kardon (Premium)',
+ '126000','AUB-3'),
+
+('HP','Pavilion 13-bb0069TU',
+ 'Processor: Intel Core i5-1135G7 Processor (8M Cache, 2.40 GHz up to 4.20 GHz)
+ Ram: 8 GB DDR4 Ram
+ Storage: 512 GB SSD
+ Graphics: Intel Iris Graphics
+ Display: 13.3 FHD backlit (1920 x 1080) Display
+ Operating System: Windows 10 Home
+ Battery: 3-cell, 41 Wh Li-ion Battery
+ Adapter: 65 W AC power adapter
+ Audio:	2.0 headphone/microphone combo
+ Special Feature:	Finger Print
+ Office: Microsoft Office Home & Student',
+'78000','HPUB-1'),
+
+('HP','Elitebook 840 G7',
+ 'Processor: Intel Core i5-10210U Processor (6M Cache, 1.60 GHz up to 4.20 GHz)
+ Ram: 8 GB 2666MHz DDR4 RAM
+ Storage: 512 GB NVMe M.2 SSD
+ Graphics: Intel UHD Graphics
+ Display: 14.1  diagonal FHD , IPS, anti-glare, WLED-backlit, eDP, 250 nits
+ , 45% NTSC (1920 x 1080)
+ Operating System:	Windows 10
+ Battery: 3 Cell Li-Ion, 53Wh
+ Adapter 65W External AC power adapter
+ Audio:	Bang & Olufsen, dual stereo speakers, 3 multi array microphone
+ Special Feature:	Finger Print Sensor',
+ '92000','HPUB-2'),
+
+('Lenovo','Yoga S940',
+'Processor:	Intel Core i7-1065G7 Processor (8M Cache, 1.30 GHz up to 3.90 GHz)
+ Ram: 16 GB DDR4 RAM
+ Storage: 1 TB NVMe SSD
+ Graphics: Intel Iris Plus Graphics
+ Displa:y 14.0 Ultra HD (3840x2160) LED Non Touch & Anti Glare Display
+ Operating System:	Windows 10 Home',
+'204000','LUB-1'),
+
+('Dell','Inspiron 13 5301',
+'Processor: Intel Core i5-1135G7 Processor (8M Cache, 2.40 GHz up to 4.20 GHz)
+ Ram: 8 GB onboard LPDDR4 3200MHz RAM
+ Storage: 512 GB M.2 PCIe NVMe SSD
+ Graphics: NVIDIA GeForce MX350 with 2GB GDDR5 graphics memory
+ Display: 13.3-inch FHD (1920 x 1080) Anti-Glare Non-Touch
+ Narrow Border 300nits 95% sRGB WVA Display
+ Operating System:	Windows 10 Home
+ Battery: 3-Cell Battery, 40WHr (Integrated)
+ Adapter: Yes
+ Audio:	2 W stereo speakers
+ Special: Feature	Finger Print Reader',
+'87000','DUB-1'),
+
+('Dell','XPS 13 7390',
+ 'Processor: Intel Core i7-10710U Processor (12M Cache, 1.10 GHz GHz up to 4.70 GHz)
+ Ram: 16 GB LPDDR3 2133MHz RAM
+ Storage: 1 TB PCIe NVMe SSD
+ Graphics: Intel UHD Graphics
+ Display: 13.3-inch 4K Ultra HD+ (3840 x 2400) Touch Display
+ Operating System:	Windows 10 Home (64-Bit)
+ Battery: 4-Cell, 52 WHr, Integrated battery
+ Adapter: 45 W AC adapter
+ Audio:	Waves MaxxAudio Pro
+ Special Feature:	TouchPad
+ Fingerprint Reader',
+'190000','DUB-2');

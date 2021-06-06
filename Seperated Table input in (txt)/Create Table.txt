@@ -1,0 +1,65 @@
+CREATE TABLE budget_laptops(
+  Brand varchar(15),
+  Model varchar(50),
+  Basic_Information varchar(800),
+  Price numeric (6,2),
+  Product_ID varchar(15),
+  PRIMARY KEY (Model),
+  FOREIGN KEY (Brand) REFERENCES gaming,
+  FOREIGN KEY (Brand) REFERENCES macbook,
+  FOREIGN KEY (Brand) REFERENCES student_laptops,
+  FOREIGN KEY (Brand) REFERENCES ultra_book
+);
+
+CREATE TABLE gaming(
+  Brand varchar(15),
+  Model varchar(50),
+  Basic_Information varchar(800),
+  Price numeric (6,2),
+  Product_ID varchar(15),
+  PRIMARY KEY (Model),
+  FOREIGN KEY (Brand) REFERENCES budget_laptops,
+  FOREIGN KEY (Brand) REFERENCES macbook,
+  FOREIGN KEY (Brand) REFERENCES student_laptops,
+  FOREIGN KEY (Brand,Price) REFERENCES ultra_book
+);
+
+
+CREATE TABLE macbook(
+  Brand varchar(15),
+  Model varchar(50),
+  Basic_Information varchar(800),
+  Price numeric (6,2),
+  Product_ID varchar(15),
+  PRIMARY KEY (Model),
+  FOREIGN KEY (Brand) REFERENCES budget_laptops,
+  FOREIGN KEY (Brand) REFERENCES gaming,
+  FOREIGN KEY (Brand) REFERENCES student_laptops,
+  FOREIGN KEY (Brand) REFERENCES ultra_book
+);
+
+CREATE TABLE student_laptops(
+  Brand varchar(15),
+  Model varchar(50),
+  Basic_Information varchar(800),
+  Price numeric (6,2),
+  Product_ID varchar(15),
+  PRIMARY KEY (Model),
+  FOREIGN KEY (Brand) REFERENCES budget_laptop,
+  FOREIGN KEY (Brand) REFERENCES macbook,
+  FOREIGN KEY (Brand) REFERENCES gaming,
+  FOREIGN KEY (Brand) REFERENCES ultra_book
+);
+
+CREATE TABLE ultra_book(
+  Brand varchar(15),
+  Model varchar(50),
+  Basic_Information varchar(800),
+  Price numeric (6,2),
+  Product_ID varchar(15),
+  PRIMARY KEY (Model),
+  FOREIGN KEY (Brand) REFERENCES budget_laptops,
+  FOREIGN KEY (Brand) REFERENCES macbook,
+  FOREIGN KEY (Brand) REFERENCES student_laptop,
+  FOREIGN KEY (Brand) REFERENCES gaming
+);
