@@ -1,0 +1,507 @@
+CREATE TABLE budget_laptops(
+  Brand varchar(15),
+  Model varchar(50),
+  Basic_Information varchar(800),
+  Price numeric (6,2),
+  Product_ID varchar(15),
+  PRIMARY KEY (Model),
+  FOREIGN KEY (Brand) REFERENCES gaming,
+  FOREIGN KEY (Brand) REFERENCES macbook,
+  FOREIGN KEY (Brand) REFERENCES student_laptops,
+  FOREIGN KEY (Brand) REFERENCES ultra_book
+);
+
+CREATE TABLE gaming(
+  Brand varchar(15),
+  Model varchar(50),
+  Basic_Information varchar(800),
+  Price numeric (6,2),
+  Product_ID varchar(15),
+  PRIMARY KEY (Model),
+  FOREIGN KEY (Brand) REFERENCES budget_laptops,
+  FOREIGN KEY (Brand) REFERENCES macbook,
+  FOREIGN KEY (Brand) REFERENCES student_laptops,
+  FOREIGN KEY (Brand,Price) REFERENCES ultra_book
+);
+
+
+CREATE TABLE macbook(
+  Brand varchar(15),
+  Model varchar(50),
+  Basic_Information varchar(800),
+  Price numeric (6,2),
+  Product_ID varchar(15),
+  PRIMARY KEY (Model),
+  FOREIGN KEY (Brand) REFERENCES budget_laptops,
+  FOREIGN KEY (Brand) REFERENCES gaming,
+  FOREIGN KEY (Brand) REFERENCES student_laptops,
+  FOREIGN KEY (Brand) REFERENCES ultra_book
+);
+
+CREATE TABLE student_laptops(
+  Brand varchar(15),
+  Model varchar(50),
+  Basic_Information varchar(800),
+  Price numeric (6,2),
+  Product_ID varchar(15),
+  PRIMARY KEY (Model),
+  FOREIGN KEY (Brand) REFERENCES budget_laptop,
+  FOREIGN KEY (Brand) REFERENCES macbook,
+  FOREIGN KEY (Brand) REFERENCES gaming,
+  FOREIGN KEY (Brand) REFERENCES ultra_book
+);
+
+CREATE TABLE ultra_book(
+  Brand varchar(15),
+  Model varchar(50),
+  Basic_Information varchar(800),
+  Price numeric (6,2),
+  Product_ID varchar(15),
+  PRIMARY KEY (Model),
+  FOREIGN KEY (Brand) REFERENCES budget_laptops,
+  FOREIGN KEY (Brand) REFERENCES macbook,
+  FOREIGN KEY (Brand) REFERENCES student_laptop,
+  FOREIGN KEY (Brand) REFERENCES gaming
+);
+
+INSERT INTO budget_laptops VALUES 
+('DELL','Inspiron n3552',
+ 'Processor: Intel Pentium Quad Core (Processor 3700U 1.6GHz 2MB Cache).
+ Ram: 4GB DDR3, 
+ Storage: 500GB SATA HDD
+ Dsiplay: 15.6″ HD (1366 x 768) LED Display
+ Operating System: Windows 10 operating system
+ Special Feature: Webcam, Bluetooth, Wi-Fi, Card Reader',
+ '25800','DB-1'),
+
+('DELL','Chromebook 11',
+'Processor: Intel Celeron N2955U
+ Ram: 4 GB DDR3 SDRAM
+ Storage: 16 GB SSD drive
+ Display: 11.6 inch HD SVA BrightView WLED-backlit, 1366 x 768 resolution,
+ Operating System: Chrome OS
+ Multi-format media reader (SD, SDHC, SDXC), 802. 11 A/C, Bluetooth 4. 0
+ 1 x USB 3. 0 port, 2 x USB 2. 0 port, 1 x HDMI port, 1 x headphone/microphone jack,
+ 3-cell, 36 WHr Li-ion Battery, Weighs 3. 6 lbs, Black Color',
+ '10400','DB-2'),
+
+('ASUS','Asus X540LA',
+'Processor: Intel Core i3-5020U Processor (3M Cache, 2.20 GHz).
+ RAM: 4GB DDR3L .
+ Storage: 1TB HDD.
+ Disply: 15.6 HD (1366×768).
+ Operating System: Windows 10 operating system', 
+'30000','AB-1'),
+
+('ASUS','Vivobook X515MA Celeron N4020',
+'Processor: Intel Celeron N4020 (4M Cache, 1.10 GHz up to 2.80 GHz)
+ Ram: 4 GB DDR4 RAM
+ Storage: 1 TB HDD
+ Display: 15.6 FHD (1920x1080)
+ Operating System: Windows 10 operating system',
+ '36000','AB-2'),
+
+('HP','15-bs630TU', 
+'Processor:Intel® Pentium® N3710 processor (1.6 GHz-2.56GHz)
+ Ram: 4GB DDR3L 
+ Storage: 500 GB 5400 rpm SATA
+ Display: 15.6 diagonal HD (1366 x 768) SVA BrightView WLED-backli
+ Operating System: Windows 10 operating systemt',
+ '28300','HPB-1'),
+
+('HP','15s-du1068TU', 
+'Processor: Intel Celeron N4020 (4MB Cache, 1.10 GHz up to 2.80 GHz)
+ Ram: 4 GB DDR4 3200Mhz 
+ Storage: 1 TB HDD
+ Graphics: Intel HD Graphics
+ Display:15.6 HD (1366 x 768)
+ Audio: Dual speakers, Web Camera
+ Operating System: Windows 10 operating system',
+ '34000','HPB-2'),
+
+
+('Lenovo','Ideapad D330', 
+'Processor: Intel Celeron Dual Core Processor
+ Ram: 4 GB Memory
+ Storage: 128 GB SSD
+ Display: 10.1 inch Screen
+ Operating System: Windows 10 operating system',
+ '28100','LB-1'),
+
+('Lenovo','Lenovo V15', 
+'Processor: AMD Dual Core Processor
+ Ram: 4 GB Memory
+ Storage: 1 TB HDD
+ Disply: 15.6 inch Screen
+ Operating System: Windows 10 operating system',
+ '28086','LB-2');
+
+
+
+
+
+
+INSERT INTO gaming VALUES
+('ASUS','TUF FX506LI',
+'Processor: Intel Core i5-10300H Processor .8M Cache, 2.50 GHz up to 4.50 GHz 
+ Ram: 8 GB DDR4 RAM
+ Storage: 1 TB HDD
+ Graphics: NVIDIA GeForce GTX 1650Ti 4GB Graphics
+ Display: 15.6 Full HD,1920x1080, 144hz Display 
+ Operating System: Windows 10, 64 -bit
+ Battery:	150W Power Supply, 3-Cell 48WHr Battery',
+ '89000','AG-1'),
+
+('ASUS','Asus D570DD',
+ 'Processor: AMD Ryzen 5 3500U Processor ,4M Cache, 2.1 GHz up to 3.7 GHz
+ Ram 8 GB DDR4 RAM
+ Storage:	512 GB SSD
+ Graphics:  Nvidia GTX 1050 with 4GB Graphics
+ Display:   15.6 Full HD,1920x1080, Antiglare Display
+ Operating System:	Windows 10 Home
+ Battery: 3 Cell Li-Ion
+ Special Feature Fingerprint sensor intergrated with Touchpad',
+ '71000','AG-2'),
+
+('HP','HP Pavilion Gaming 16-a0097TX',
+'Processor:	Intel Core i5-10300H Processor ,8M Cache, 2.50 GHz up to 4.50 GHz
+ Ram: 8 GB DDR4-2933 SDRAM ,1 x 8 GB
+ Storage: 1 TB 7200 rpm SATA HDD,256 GB PCIe NVMe TLC M.2 SSD
+ Graphics: NVIDIA GeForce GTX 1650Ti 4GB GDDR6 dedicated Graphics
+ Display: 16.1 diagonal, FHD,1920 x 1080, IPS 144hz, micro-edge, anti-glare, 250 nits, 45% NTSC
+ Operating System:	Windows 10 Home
+ Battery:	3-cell, 52.5 Wh Li-ion',
+ '101000','HPG-1'),
+
+
+('HP','15s-du3042TX',
+'Processor: Intel Core i7 11th gen 1165G7 Processor,12M Cache, 2.80 to 4.70 GHz
+ Ram: 8 GB DDR4 Ram
+ Storage: 1 TB HDD
+ Graphics: NVIDIA GeForce MX450 with 2GB GDDR5 Graphics
+ Display: 15.6 FHD,1920x1080
+ Operating System:	Windows 10 Home',
+'86500','HPG-2'),
+
+('Lenovo','Legion 5',
+'Processor: Intel Core i5-10300H Processor,8M Cache, 2.50 GHz up to 4.50 GHz
+ Ram: 16 GB DDR4 RAM
+ Storage: 1TB HDD,256GB NVMe SSD
+ Graphics: NVIDIA GeForce GTX 1650Ti 4GB GDDR6 Graphics
+ Display: 15.6 FHD ,1920×1080, IPS 250nits Anti-glare, 120Hz, 45% NTSC
+ Operating System: Windows 10 Home
+ Battery:	Upto 5.9 hr Backup.',
+ '115000','LG-1'),
+
+('Lenovo','Lenovo Legion Y540',
+'Processor:	Intel Core i5-9300H Processor ,8M Cache, 2.40 GHz up to 4.10,
+ Ram: 8 GB DDR4 RAM
+ Storage: 1 TB HDD+ 256GB SSD NVME
+ Graphics: NVIDIA GTX 1650 4GB Graphics
+ Display: 15.6 FHD ,1920x1080, WVA 250nits Anti-glare, 60Hz Display
+ Operating System:	Windows 10 Home
+ Battery	Battery Chemistry: Lithium-Ion Polyme
+ Capacity Non-Removable 3-Cell: 57 Wh',
+ '98000','LG-2'),
+
+('Dell','G3 15-3500',
+'Processor: Intel Core i7-10750H Processor ,12M Cache, 2.60 GHz up to 5.00 GHz
+ Ram: 16 GB DDR4 2933MHz ,2x8GB RAM
+ Storage: 512 GB M.2 PCIe NVMe SSD
+ Graphics: NVIDIA GeForce GTX 1660 Ti 6GB GDDR6Graphics
+ Display: 15.6 inch FHD ,1920 x 1080 ,120Hz 250 nits WVA Anti- Glare LED Backlit Narrow Border Display
+ Operating System:	Windows 10 Home
+ Battery:	4-Cell Battery, 68 Whr',
+ '130000','DG-1');
+ 
+
+INSERT INTO macbook VALUES 
+('Apple','Macbook Air 2020',
+ 'Processor:	Intel Core i3-1000NG4 Processor (4M Cache, 1.10 GHz up to 3.20 GHz)
+ Ram: 8 GB 3733MHz LPDDR4X onboard RAM
+ Storage: 256 GB SSD
+ Graphics: Intel Iris Plus Graphics
+ Display: 13.3-inch (diagonal) Retina LED-backlit display with IPS technology;
+ 2560-by-1600 native resolution at 227 pixels per inch with support for millions of colors
+ Operating System:	macOS
+ Battery: Built-in 49.9 watt-hour lithium polymer battery
+ Adapter: 30W USB-C power adapter
+ Audio:	Stereo speakers
+ Supports Dolby Atmos playback
+ Three microphone high wind array, with directional beam forming
+ Special Feature:	Display WithTouch ID sensor',
+ '96000','AMB-1'),
+
+('Apple','Apple MacBook Air 13" Space Gray with Apple M1 Chip',
+ 'Processor: Apple M1 chip with 8-core CPU and 7-core GPU
+ Ram: 8 GB RAM
+ Storage: 256GB SSD
+ Graphics: 7-core GPU
+ Display: 13.3-inch (diagonal) LED-backlit Retina display with IPS technology; 
+ 2560-by-1600 native resolution at 227 pixels per inch with support for millions of colors
+ Operating System: macOS
+ Battery: Built-in 49.9‑watt‑hour lithium‑polymer battery
+ Adapter: 30W USB-C power adapter
+ Audio:	Stereo speakers
+ Wide stereo sound
+ Support for Dolby Atmos playback
+ Three-mic array with directional beamforming
+ 3.5 mm headphone jack',
+ '110000','AMB-2'),
+
+('Apple','Apple Macbook Air 2020',
+ 'Processor: Intel Core i5 10th Gen (1.1GHz up to 3.5GHz)
+ Ram: 8 GB 3733MHz LPDDR4X RAM
+ Storage: 512 GB SSD
+ Graphics: Intel Iris Plus Graphics
+ Display: 13.3-inch (diagonal) Retina LED-backlit display with IPS technology; 
+ 2560-by-1600 native resolution at 227 pixels per inch with support for millions of colors
+ Operating System: macOS
+ Battery: Built-in 49.9 watt-hour lithium polymer battery
+ Adapter: 30W USB-C power adapter
+ Audio:	Stereo speakers
+ Supports Dolby Atmos playback
+ Three microphone high wind array, with directional beam forming',
+'126000','AMB-3'),
+
+('Apple','Apple MacBook Pro 13.3-Inch MYDA2',
+ 'Processor:	Apple M1 chip with 8-core CPU and 8-core GPU
+ Ram: 8 GB RAM
+ Storage: 256 GB SSD
+ Graphics: Intel Integrated Graphics
+ Display: Retina display 13.3-inch (diagonal) LED-backlit display with IPS technology; 
+ 2560-by-1600 native resolution at 227 pixels per inch with support for millions of colors
+ Supported scaled resolutions: 1680 by 1050, 1440 by 900,1024 by 640; 500 nits brightness;
+ Wide color (P3); True Tone technology
+ Operating System:	Mac OS X
+ Battery: Built-in 58.2-watt-hour lithium-polymer battery
+ Adapter: 61W USB-C Power Adapter
+ Audio:	Stereo speakers with high dynamic range
+ Wide stereo sound
+ Support for Dolby Atmos playback
+ Studio-quality three-mic array with directional beamforming
+ 3.5 mm headphone jack',
+'138000','AMB-4'),
+
+('Apple','Apple Macbook Pro MVVK2',
+ 'Processor: 2.3GHz 8-core 9th-generation Intel Core i9 processor (Turbo Boost up to 4.8GHz)
+ Ram: 16 GB 2666MHz DDR4 memory
+ Storage: 1 TB SSD storage
+ Graphics: AMD Radeon Pro 5500M with 4GB of GDDR6 memory
+ Display: 16-inch Retina display with True Tone
+ Operating System:	macOS
+ Battery: 100Wh Lithium Polymer Battery
+ Special Feature: Fingerprint Reader
+ AC Input Power: 100 to 240 VAC, 50 / 60 Hz',
+'255000','AMB-5'),
+
+('Apple','Apple MacBook Pro Space Gray 2020',
+ 'Processor: 10th Gen Core i7-2.3GHz Processor
+ Ram: 32 GB 3733MHz LPDDR4X RAM
+ Storage: 2 TB SSD
+ Graphics: Intel Iris Plus Graphics
+ Display: 13"(2560 x 1600) LED-backlit Retina Display
+ Operating System: macOS
+ Battery: Integrated 58.2- or 58.0-watt-hour lithium-polymer battery
+ Adapter: 61W USB-C Power Adapter
+ Special Feature:	Touch Bar and Touch ID',
+'305000','AMB-6');
+
+
+
+
+
+INSERT INTO student_laptops VALUES 
+('ASUS','ASUS VivoBook 15 ',
+'Processor: 2.1 GHz Dual-Core 8th Gen. Intel Core i3-8145U, up to 3.9 GHZ
+ RAM: 8 GB, DDR4
+ Storage: 128 GB M.2 SSD
+ Graphics Card: Intel UHD Graphics 620
+ Display: 15.6″ FHD Display
+ Operating System: Windows 10
+ Battery: N/A', 
+ '37500','AS-1'),
+
+('ASUS','Asus Chromebook Flip',
+'Processor: 0.9 GHz Intel Core m3
+ RAM: 4 GB 
+ Storage: 64 GB Flash Expandable via Google Drive 
+ Display: 15.6″ FHD Display
+ Operating System: Windows 10
+ Battery: 10 Hours',
+ '32400','AS-2'),
+
+ 
+('HP','HP 15s-du1068TU Celeron N4020',
+'Processor: Intel Celeron N4020, 4MB Cache, 1.10 GHz up to 2.80 GHz
+ Ram: 4 GB DDR4 ,3200mhz RAM
+ Storage: 1 TB HDD
+ Graphics: Intel HD Graphics
+ Display: 15.6 HD ,1366 x 768 Display
+ Operating System: Windows 10 Home',
+ '33000', 'HPS-1'),
+
+('HP','HP 15s-du1027TX', 
+'Processor: Intel Core i7-10510U Processor,8M Cache, 1.80 GHz up to 4.90 GHz
+ Ram: 8 GB DDR4-2666 SDRAM,1 x 8 GB
+ Storage: 1 TB 5400 rpm SATA HDD
+ Graphics: NVIDIA GeForce MX130 2 GB GDDR5 dedicated Graphics
+ Display: 15.6 diagonal FHD SVA anti-glare micro-edge WLED-backlit,1920 x 1080
+ Operating System: Windows 10
+ Battery: 3-cell, 41 Wh Li-ion',
+ '44500', 'HPS-2'),
+
+('Lenovo','Lenovo Ideapad Slim 3',
+'Processor: AMD Ryzen 5 3500U Processor,2.10GHz 2MB
+ RAM: 12 GB.
+ Storage: 1 TB HDD SATA, 5400rpm.
+ Display: 15.6 inches.
+ Camera: 0.3 MP.
+ Operating System: Windows 10', 
+'31000','LS-1'),
+
+('Apple','Apple Macbook Air',
+'Intel Core i5 processor,1.6GHz dual-core up to 3.6GHz, 4MB L3 cache
+ RAM: 8 GB of 2133MHz LPDDR3 RAM
+ Storage: 128 GB SSD
+ Display: 13.3-inch Retina Display LED-backlit
+ Operating System: Windows 10',
+ '105000','APS-1'),
+
+('Dell','Dell Inspiron 15-3583 Pentium Gold 5405U', 
+'Processor: Intel Pentium Gold 5405U Processor ,2M Cache, 2.30 GHz
+ Ram: 4 GB DDR4 2666MHz RAM
+ Storage: 1 TB HDD
+ Graphics: Intel UHD Graphics 610
+ Display: 15.6-inch HD ,1366 x 768 Anti-Glare LED-Backlit Non-touch Display
+ Operating System: Windows 10 Home
+ Battery: 3-Cell, 42 WHr, Integrated battery
+ Adapter:45 W AC adapter',
+ '38500','DS-1');
+
+
+
+INSERT INTO ultra_book VALUES
+('ASUS','ZenBook 14 UM425IA',
+ 'Processor: AMD Ryzen 5 4500U (2.30 GHz up to 4.00 GHz, 8MB Cache)
+ Ram: 8 GB LPDDR4x RAM
+ Storage: 512 GB PCIe G3 SSD
+ Graphics: AMD Radeon Graphics
+ Display: 14  FHD (1920x1080) Display
+ Operating System: Windows 10 Home
+ Battery: 67 Wh 4-cell lithium-polymer battery
+ Adapter 65 W power adaptor
+ Plug Type: Type C
+ Audio:	ASUS SonicMaster stereo audio system with surround-sound;
+ smart amplifier for maximum audio performance
+ Array microphone with Cortana and Alexa voice-recognition support
+ Certified by Harman Kardon
+ Special Feature:	Touchpad / NumberPad:
+ Glass-covered; intelligent palm-rejection
+ Precision Touchpad (PTP) technology supports up to four-finger smart gestures',
+'77000','AUB-1'),
+
+('ASUS','ZenBook 14 UM425IB',
+ 'Processor: AMD Ryzen 7 4700U Processor (8M Cache, 2.00GHz up to 4.10 GHz)
+ Ram: 16 GB LPDDR4x RAM
+ Storage: 512GB PCIe NVMe 3.0 x2 M.2 SSD
+ Graphics: AMD Radeon Graphics
+ Display: 14 FHD (1920x1080) Display
+ Operating System: Windows 10 Home
+ Battery: 67 Wh 4-cell lithium-polymer battery
+ Adapter 65 W power adaptor
+ Plug Type: Type C(Output: 20 V DC, 65 W)
+ (Input: 100-240 V AC, 50/60 Hz universal)
+ Audio:	ASUS SonicMaster stereo audio system with surround-sound; 
+ smart amplifier for maximum audio performance
+ Array microphone with Cortana and Alexa voice-recognition support
+ Certified by Harman Kardon
+ Special Feature: Touchpad / NumberPad:
+ Glass-covered; intelligent palm-rejection
+ Precision Touchpad (PTP) technology supports up to four-finger smart gestures',
+'95000','AUB-2'),
+
+('ASUS','ZenBook Duo UX481FA',
+'Processor:	Intel Core i7-10510U Processor (8M Cache, 1.80 GHz up to 4.90 GHz)
+ Ram: 8GB LPDDR3 on board RAM
+ Storage: 512GB M.2 NVMe PCIe 3.0 SSD
+ Graphics: Intel UHD Graphics 620
+ Display: 14 LED-backlit Full HD (1920 x 1080) 16:9 Anti-glare, 
+ Pantone Validated, Display
+ 3.5mm-thin bezel with 90% screen-to-body ratio 100% sRGB
+ Operating System:	Windows 10
+ Battery: 70WHrs, 4S1P, 4-cell Li-ion
+ Adapter 65W power adapter
+ Plug Type: ø4.5 (mm)
+ (Output: 19V DC, 3.42A, 65W)
+ (Input: 100-240V AC, 50/60Hz universal)
+ Audio:	Audio by ICEpower
+ Smart Amp Technology
+ Built-in speaker
+ Built-in array microphone//harman/kardon (Premium)',
+ '126000','AUB-3'),
+
+('HP','Pavilion 13-bb0069TU',
+ 'Processor: Intel Core i5-1135G7 Processor (8M Cache, 2.40 GHz up to 4.20 GHz)
+ Ram: 8 GB DDR4 Ram
+ Storage: 512 GB SSD
+ Graphics: Intel Iris Graphics
+ Display: 13.3 FHD backlit (1920 x 1080) Display
+ Operating System: Windows 10 Home
+ Battery: 3-cell, 41 Wh Li-ion Battery
+ Adapter: 65 W AC power adapter
+ Audio:	2.0 headphone/microphone combo
+ Special Feature:	Finger Print
+ Office: Microsoft Office Home & Student',
+'78000','HPUB-1'),
+
+('HP','Elitebook 840 G7',
+ 'Processor: Intel Core i5-10210U Processor (6M Cache, 1.60 GHz up to 4.20 GHz)
+ Ram: 8 GB 2666MHz DDR4 RAM
+ Storage: 512 GB NVMe M.2 SSD
+ Graphics: Intel UHD Graphics
+ Display: 14.1  diagonal FHD , IPS, anti-glare, WLED-backlit, eDP, 250 nits
+ , 45% NTSC (1920 x 1080)
+ Operating System:	Windows 10
+ Battery: 3 Cell Li-Ion, 53Wh
+ Adapter 65W External AC power adapter
+ Audio:	Bang & Olufsen, dual stereo speakers, 3 multi array microphone
+ Special Feature:	Finger Print Sensor',
+ '92000','HPUB-2'),
+
+('Lenovo','Yoga S940',
+'Processor:	Intel Core i7-1065G7 Processor (8M Cache, 1.30 GHz up to 3.90 GHz)
+ Ram: 16 GB DDR4 RAM
+ Storage: 1 TB NVMe SSD
+ Graphics: Intel Iris Plus Graphics
+ Displa:y 14.0 Ultra HD (3840x2160) LED Non Touch & Anti Glare Display
+ Operating System:	Windows 10 Home',
+'204000','LUB-1'),
+
+('Dell','Inspiron 13 5301',
+'Processor: Intel Core i5-1135G7 Processor (8M Cache, 2.40 GHz up to 4.20 GHz)
+ Ram: 8 GB onboard LPDDR4 3200MHz RAM
+ Storage: 512 GB M.2 PCIe NVMe SSD
+ Graphics: NVIDIA GeForce MX350 with 2GB GDDR5 graphics memory
+ Display: 13.3-inch FHD (1920 x 1080) Anti-Glare Non-Touch
+ Narrow Border 300nits 95% sRGB WVA Display
+ Operating System:	Windows 10 Home
+ Battery: 3-Cell Battery, 40WHr (Integrated)
+ Adapter: Yes
+ Audio:	2 W stereo speakers
+ Special: Feature	Finger Print Reader',
+'87000','DUB-1'),
+
+('Dell','XPS 13 7390',
+ 'Processor: Intel Core i7-10710U Processor (12M Cache, 1.10 GHz GHz up to 4.70 GHz)
+ Ram: 16 GB LPDDR3 2133MHz RAM
+ Storage: 1 TB PCIe NVMe SSD
+ Graphics: Intel UHD Graphics
+ Display: 13.3-inch 4K Ultra HD+ (3840 x 2400) Touch Display
+ Operating System:	Windows 10 Home (64-Bit)
+ Battery: 4-Cell, 52 WHr, Integrated battery
+ Adapter: 45 W AC adapter
+ Audio:	Waves MaxxAudio Pro
+ Special Feature:	TouchPad
+ Fingerprint Reader',
+'190000','DUB-2');
